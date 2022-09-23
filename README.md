@@ -50,7 +50,7 @@ Agregamos la clave GPG oficial de Docker:
  Usamos el siguiente comando para configurar el repositorio:
 ```
  echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg]      https://download.docker.com/linux/ubuntu \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
@@ -73,7 +73,6 @@ Para instalar una versión específica de Docker Engine, enumeramos las versione
 ```
  sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
 ```
-FOOOOTOOOOOOOOOO
 
 Verificamos que Docker Engine esté instalado correctamente 
 ```
@@ -83,7 +82,17 @@ Ejecutamos docker/getting-started, que lleva al tutorial de Docker
 ```
  sudo docker run -d -p 80:80 docker/getting-started
 ```
-FOOOOTOOOOOOOOOO
+ Abrimos un navegador e ingresamos al localhost:80 que nos redirecciona a http://localhost/tutorial/
+ 
+![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/run%20gettingStarted.png)
+
+
+## :three: Descarga de Nginx
+ ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/220px-Nginx_logo.svg.png)
+ ```
+ sudo docker pull nginx
+ ```
+  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/pullnginx.png)
 
 Ejecutamos nginx
 ```
@@ -91,19 +100,12 @@ Ejecutamos nginx
 ```
 ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/run%20nginx.png)
 
-Con el siguiente comando mostramos los contenedores que estan activos:
-```
-  sudo docker ps
-``` 
-  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/ps%202.png)
+Abrimos un navegador e ingresamos al localhost:8000 
+ 
+ ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/nginx.png)
+ 
 
-## :three: Descaga de nginx
- ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/220px-Nginx_logo.svg.png)
- ```
- sudo docker pull nginx
- ```
-  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/pullnginx.png)
-
+Con los sigueintes comandos podemos detener y remover contenedores
  ```
  sudo docker stop <CONTAINER ID>
  ```
@@ -112,18 +114,20 @@ Con el siguiente comando mostramos los contenedores que estan activos:
  ```
  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/stop%20y%20rm.png)
  
- Abrimos un navegador y ingresamos al localhost:8000 
- 
- ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/nginx.png)
- 
+Con el siguiente comando mostramos los contenedores que estan activos:
+```
+  sudo docker ps
+``` 
+  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/ps%202.png)
+
  Al remover los contenedores aparece la tabla vacia
 ```
   sudo docker ps
 ``` 
  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/ps%200.png)
 
- Referencias:
- https://docs.docker.com/engine/install/ubuntu/
+Links se apoyo: <br>
+ https://docs.docker.com/engine/install/ubuntu/ <br>
  https://www.youtube.com/watch?v=mgwo8fq-SkA&t=130s
  
  
