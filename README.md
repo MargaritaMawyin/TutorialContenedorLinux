@@ -126,7 +126,7 @@ Con el siguiente comando mostramos los contenedores que estan activos:
 ``` 
  ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/ps%200.png)
 
-Links se apoyo: <br>
+Links de apoyo: <br>
  https://docs.docker.com/engine/install/ubuntu/ <br>
  https://www.youtube.com/watch?v=mgwo8fq-SkA&t=130s
  
