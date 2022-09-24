@@ -19,7 +19,11 @@
 ## :two: Descarga del contenedor
 
 ![Docker](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/220px-Docker_%28container_engine%29_logo.svg.png)
+***
+[Docker](https://seguridadenlainformatica.com/docker-que-es/) es una plataforma de software de código abierto para crear, desplegar y gestionar contenedores de aplicaciones virtualizados en un sistema operativo (SO) común, con un ecosistema de herramientas aliadas. El software que aloja los contenedores se llama Docker Engine.
 
+Docker proporciona una forma de ejecutar aplicaciones aisladas de forma segura en un contenedor, empaquetado con todas sus dependencias y bibliotecas.
+***
 
 En el entorno WSL descargamos [Docker](https://docs.docker.com/engine/install/ubuntu/)
 
@@ -82,13 +86,19 @@ Ejecutamos docker/getting-started, que lleva al tutorial de Docker
 ```
  sudo docker run -d -p 80:80 docker/getting-started
 ```
+*-p	:	Publish a container's port(s) to the host* <br>
+*-d		Run container in background and print container ID*
  Abrimos un navegador e ingresamos al localhost:80 que nos redirecciona a http://localhost/tutorial/
  
 ![alt text](https://github.com/MargaritaMawyin/TutorialContenedorLinux/blob/main/run%20gettingStarted.png)
 
 
 ## :three: Descarga de Nginx
+
  ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/220px-Nginx_logo.svg.png)
+ ***
+[NGINX](https://www.hostinger.es/tutoriales/que-es-nginx), pronunciado en inglés como «engine-ex», es un famoso software de servidor web de código abierto. En su versión inicial, funcionaba en servidores web HTTP. Sin embargo, hoy en día también sirve como proxy inverso, balanceador de carga HTTP y proxy de correo electrónico para IMAP, POP3 y SMTP.
+***
  ```
  sudo docker pull nginx
  ```
@@ -128,6 +138,8 @@ Con el siguiente comando mostramos los contenedores que estan activos:
 
 Links de apoyo: <br>
  https://docs.docker.com/engine/install/ubuntu/ <br>
- https://www.youtube.com/watch?v=mgwo8fq-SkA&t=130s
+ https://www.youtube.com/watch?v=mgwo8fq-SkA&t=130s <br>
+ https://seguridadenlainformatica.com/docker-que-es/ <br>
+ https://www.hostinger.es/tutoriales/que-es-nginx
  
  
